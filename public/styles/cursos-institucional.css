@@ -1,0 +1,432 @@
+.contenedor-uno {
+    width: 100%;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #001b7a 0%, #2a7fa6 100%);
+    text-align: center;
+}
+.contenedor-uno h1 {
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.sub-text{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/*-----*/
+.section-info {
+    padding: 60px 0;
+}
+/*-----*/
+.contenedor-dos{
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    gap: 5%;
+    align-items: center;
+}
+.texto-uno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    padding: 30px;
+    border-radius: 12px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.1);
+}
+.texto-uno p {
+    margin-bottom: 15px;
+}
+.cards-uno{
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12px;
+    gap: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.15);
+}
+.cards{
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1a5f7a 0%, #2a7fa6 100%);
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(26, 95, 122, 0.2);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.cards:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(26, 95, 122, 0.3);
+}
+.cards p {
+    text-align: center;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+.cards small {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+/* responsive rules moved to the end of the file to avoid being overwritten */
+.section-infodos{
+    height: auto;
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+.contenedor-tres{
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.1);
+}
+.sub-titulo{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #001b7a;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.experiencia{
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    padding: 30px;
+    border-radius: 12px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(26, 95, 122, 0.08);
+}
+.experiencia p {
+    margin-bottom: 15px;
+}
+.servicios-alineados{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 0 10% 0 10%;
+    font-weight: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+/*---*/
+.section-servicios {
+    background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
+    width: 100%;
+    padding: 80px 0;
+}
+.contenedor-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contenedor-flex h2{
+    font-weight: 900;
+    color: #001b7a;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.contenedor-flex p {
+    font-weight: 500;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 800px;
+    line-height: 1.7;
+}
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.cards-servicios{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.12);
+    transition: all 0.3s ease;
+}
+.cards-servicios:hover {
+    box-shadow: 0 12px 40px rgba(26, 95, 122, 0.2);
+    transform: translateY(-8px);
+}
+.tittle-servicio {
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(135deg,#001b7a 0%, #1a5f7a 100%);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.text-servicio{
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/*---*/
+.capacitación-solicitar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 5%;
+    gap: 40px;
+    background: #f8f9fa;
+    margin: 0 auto;
+}
+.card-capacitación{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.12);
+    transition: all 0.3s;
+}
+.card-capacitación:hover {
+    box-shadow: 0 12px 40px rgba(26, 95, 122, 0.2);
+    transform: translateY(-5px);
+}
+.servicios-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.servicios-list li {
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.servicios-list li::before{
+    content: "✓";
+    position:absolute;
+    left: 0;
+    top: 0;
+    color: #2a7fa6;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.modalidad-list{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.modalidad-list li{
+    width: auto;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1a5f7a 0%, #2a7fa6 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: default;
+    box-shadow: 0 4px 16px rgba(26, 95, 122, 0.25);
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.modalidad-list li:hover {
+    transform: scale(1.05);
+}
+.card-solicitar{
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(26, 95, 122, 0.12);
+    transition: all 0.3s;
+}
+.card-solicitar:hover {
+    box-shadow: 0 12px 40px rgba(26, 95, 122, 0.2);
+    transform: translateY(-5px);
+}
+.card-solicitar p {
+    color: #333;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px){
+    .capacitación-solicitar{
+        display: flex;
+        flex-direction: column;
+    }
+    .modalidad-list{
+        flex-direction: column;
+    }
+    .sub-titulo{
+        text-align: center;
+    }
+}
+/*---*/
+.course-item {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #2a7fa6;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(26, 95, 122, 0.1);
+    transition: all 0.3s ease;
+}
+
+.course-item:hover {
+    box-shadow: 0 12px 32px rgba(26, 95, 122, 0.2);
+    transform: translateY(-8px);
+    border-left-color: #1a5f7a;
+}
+
+.course-item h4 {
+    color: #1a5f7a;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+.cursos-diplomas {
+    padding: 80px 0;
+    background: white;
+}
+.flex-contenedor{
+    width: 90%;
+    margin: 0 auto 40px;
+    text-align: center;
+    padding: 30px 0;
+}
+.flex-contenedor h2 {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.flex-contenedor .sub-titulo {
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Consolidated mobile responsive rules */
+@media (max-width: 768px) {
+    .contenedor-uno { 
+        padding: 40px 20px; 
+    }
+    .contenedor-uno h1 { 
+        font-size: 2rem; 
+    }
+    .sub-text { 
+        font-size: 1.1rem; 
+    }
+    .contenedor-dos { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 25px; 
+        padding: 30px 20px; }
+    .cards-uno { 
+        flex-direction: column; 
+        padding: 20px; 
+    }
+    .cards { 
+        width: 100%; 
+    }
+    .contenedor-tres { 
+        grid-template-columns: 1fr; 
+        padding: 25px 20px; 
+    }
+    .grid-servicios { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 25px; 
+        width: 95%; 
+    }
+    .cards-servicios { 
+        padding: 30px 20px; 
+    }
+    .capacitación-solicitar { 
+        display: flex; 
+        flex-direction: column; 
+        padding: 40px 20px; 
+        gap: 25px; 
+    }
+    .modalidad-list { 
+        flex-direction: column; 
+    }
+    .modalidad-list li { 
+        width: 100%; 
+    }
+    .sub-titulo { 
+        text-align: center; 
+    }
+    .courses-list { 
+        grid-template-columns: 1fr; 
+        width: 95%; 
+        gap: 20px; 
+    }
+    .contenedor-flex h2 { 
+        font-size: 1.8rem; 
+    }
+    .flex-contenedor h2{
+        font-size: 1.8rem;
+    }
+}
+

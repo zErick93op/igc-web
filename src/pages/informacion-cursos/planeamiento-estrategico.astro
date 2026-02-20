@@ -1,0 +1,21 @@
+﻿---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+import SubCursoForm from "../../components/SubCursoForm.astro";
+
+const pageTitle = "Planeamiento Estratégico";
+const backHref = "/cursos-gestion/sistema-electronicos-gestion-publica";
+---
+<InfoLayout title={`${pageTitle} | Información`}> 
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
+  </Fragment>
+
+  <SubCursoForm title={pageTitle} backHref={backHref} />
+
+  <section class="course-extra">
+    <h2>Más información</h2>
+    <p>Agrega aquí temario, docentes, modalidad y cualquier otro detalle del programa.</p>
+  </section>
+</InfoLayout>
+
+

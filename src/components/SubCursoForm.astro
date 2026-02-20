@@ -1,0 +1,83 @@
+﻿---
+const { title, backHref } = Astro.props;
+---
+<div class="container info-course-container">
+  <div class="info-section">
+    <img src="/img/logoigc.png" alt="LOGO" class="logoigc" />
+    <div class="info-content">
+      <span class="badge">¡Comienza Ahora!</span>
+      <h1>
+        Solicita
+        <span class="highlight">Información</span>
+        <span class="red-accent">Especializada</span>
+      </h1>
+      <p class="course-name"><strong>Programa:</strong> {title}</p>
+      <p>
+        Completa el formulario y nuestro equipo de asesores especializados se pondrá en contacto
+        contigo de inmediato para brindarte toda la información que necesitas.
+      </p>
+
+      <ul class="features">
+        <li>Atención personalizada por expertos</li>
+        <li>Respuesta garantizada en 24 horas</li>
+        <li>Asesoría completamente gratuita</li>
+        <li>Información detallada de programas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-header">
+      <h2>Formulario de Contacto</h2>
+      <p class="subtitle">Estamos listos para atenderte</p>
+    </div>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label>
+          Nombres y Apellidos <span class="required">*</span>
+        </label>
+        <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required />
+      </div>
+
+      <div class="form-group">
+        <label>
+          Correo Electrónico <span class="required">*</span>
+        </label>
+        <input type="email" name="email" placeholder="ejemplo@correo.com" required />
+      </div>
+
+      <div class="form-group">
+        <label>
+          Número de Celular <span class="required">*</span>
+        </label>
+        <input type="tel" name="telefono" placeholder="+51 999 999 999" required />
+      </div>
+
+      <div class="form-group">
+        <label>
+          Mensaje <span class="required">*</span>
+        </label>
+        <textarea name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..." required>
+Quiero información sobre {title}
+        </textarea>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terminos" required />
+        <label for="terminos">
+          Al enviar este formulario acepto los <a href="#">Términos y Condiciones</a> de uso y la Política de
+          Privacidad
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Solicitud</button>
+
+      <div class="note">
+        <strong>Importante:</strong> Una vez enviada tu solicitud, uno de nuestros asesores se comunicará contigo en un
+        máximo de 24 horas. También puedes contactarnos directamente vía WhatsApp para una atención inmediata.
+      </div>
+    </form>
+    <a href={backHref} class="btn-regreso">Regresar</a>
+  </div>
+</div>

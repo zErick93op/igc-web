@@ -1,0 +1,121 @@
+/* Estilos para cursos-gestion-publica */
+.card.h-100 {
+    display:flex;
+    flex-direction:column
+}
+.course-cards .card-body {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:8px;
+    flex:1 1 auto
+}
+.card-label {
+    font-size:0.75rem;
+    color:#6c757d;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:0.25rem;
+    letter-spacing:0.6px
+}
+.card-meta {
+    font-size:0.9rem;
+    color:#6c757d;
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    margin-bottom:0.75rem
+}
+.card-meta svg {
+    display:none
+}
+.card-meta small::before {
+    content:"";
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23006CF0'><path d='M7 10h10v2H7z'/><path d='M19 4h-1V2.5a.5.5 0 0 0-1 0V4H7V2.5a.5.5 0 0 0-1 0V4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM5 8v10h14V8H5z'/></svg>");background-repeat:no-repeat;
+    background-size:contain;
+    margin-right:6px;
+    vertical-align:middle
+}
+.card-more {
+    font-weight:600;
+    color:var(--bs-primary);
+    text-decoration:none;
+    display:inline-block;
+    padding:7px 12px;
+    border:1px solid var(--bs-primary);
+    border-radius:8px;
+    align-self:center;
+    margin-top:0.5rem;
+    transition:background-color 180ms ease,color 180ms ease,transform 140ms ease,box-shadow 140ms ease
+}
+.card-more:hover {
+    background:var(--bs-primary);
+    color:#fff;
+    transform:translateY(-3px);box-shadow:0 8px 20px rgba(13,110,253,.12)
+}
+.card-more:focus {
+    outline:none;
+    box-shadow:0 0 0 4px rgba(13,110,253,.12)
+}
+/* Fuerza altura consistente en las imágenes para igualar patas de las cards */
+.course-cards .card-img-top {
+    height:170px;
+    object-fit:cover;
+    display:block;
+    border-bottom:1px solid rgba(0,0,0,0.04)
+}
+
+/* ----- TÍTULO E INTRODUCCIÓN (estilo profesional) ----- */
+.course-title{
+  font-size:2.1rem;
+  font-weight:800;
+  color:#001b7a;
+  letter-spacing:0.6px;
+  margin-bottom:0.5rem;
+  text-transform:uppercase;
+  position:relative;
+  padding-bottom:0.75rem;
+}
+.course-title::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:60px;
+  height:4px;
+  background:linear-gradient(90deg,#006cf0,#003f8a);
+  border-radius:2px;
+}
+.course-sub-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.course-intro{
+  color:#495057;
+  font-size:1.02rem;
+  line-height:1.7;
+  max-width:920px;
+  margin-top:0.75rem;
+  margin-bottom:0.75rem;
+  padding:14px;
+}
+.p-down {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (max-width:768px){
+  .course-title {
+    font-size:1.5rem
+    }
+  .course-intro {
+    font-size:0.98rem;
+    padding:12px
+    }
+  .course-cards .card-img-top {
+    height:140px 
+    } 
+}

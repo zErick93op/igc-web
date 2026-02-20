@@ -1,0 +1,21 @@
+﻿---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+import SubCursoForm from "../../components/SubCursoForm.astro";
+
+const pageTitle = "Gestión por Resultados (GpR)";
+const backHref = "/cursos-gestion/gestion-publica-estrategica-planeamiento";
+---
+<InfoLayout title={`${pageTitle} | Información`}> 
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
+  </Fragment>
+
+  <SubCursoForm title={pageTitle} backHref={backHref} />
+
+  <section class="course-extra">
+    <h2>Más información</h2>
+    <p>Agrega aquí temario, docentes, modalidad y cualquier otro detalle del programa.</p>
+  </section>
+</InfoLayout>
+
+

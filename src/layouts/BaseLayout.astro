@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap 
+
+const { title = "IGC" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Tu CSS global (está en public/styles/style.css) -->
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <!-- Aqui Inyecte el Css extra -->
+  
+    <slot name="head"/>
+
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!--JS -->
+    <script src="/js/script.js" is:inline></script>
+
+    <!-- Bootstrap JS-->
+    <script>
+      import "bootstrap/dist/js/bootstrap.bundle.min.js";
+    </script>
+  </body>
+</html>

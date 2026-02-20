@@ -1,0 +1,180 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+---
+<BaseLayout title="Sistema Electronicos De Gestión Pública - IGC">
+<link rel="stylesheet" href="/styles/cursos/cursos-gestion.css" slot="head">
+
+<main>
+    <!-- Carrusel -->
+    <section class="carrusel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/IGC 1.png" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/IGC 2.png" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/IGC 3.png" class="d-block w-100" alt="">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Contenido general de la sección Cursos Gestión Pública -->
+    <section class="course-main py-5">
+        <div class="container">
+            <h1 class="course-title">SISTEMA ELECTRÓNICOS DE GESTIÓN PÚBLICA</h1>
+            <h2 class="course-sub-title">Sistemas Electrónicos de Gestión Pública SIGA, SIAF y SEACE y Gobierno Electrónico</h2>
+            <div class="course-intro lead">
+                <p>La incorporación de sistemas electrónicos en la gestión pública permite a las entidades estatales optimizar procesos, garantizar transparencia y mejorar la eficiencia administrativa. Con el avance de la digitalización, los servidores públicos requieren competencias sólidas para manejar herramientas electrónicas que faciliten la gestión institucional y la atención al ciudadano.</p>
+                <p>Los cursos en esta área están diseñados para capacitar a los participantes en el manejo integral de las principales plataformas de gestión electrónica utilizadas en el sector público, así como en Gobierno Electrónico (G-E o e-Government), ya que ambos contribuyen a la digitalización de procesos, la transparencia, la eficiencia y la modernización de los servicios estatales.</p>
+            </div>
+            <h2 class="course-sub-title">Contenido Principales:</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Gobierno Electrónico (G-E):
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Principios y políticas de gobierno digital.</li>
+                            <li>Plataformas digitales para la atención al ciudadano.</li>
+                            <li>Gestión de información pública y datos abiertos.</li>
+                            <li>Seguridad digital, privacidad y protección de la información institucional.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        SIGA – Sistema Integrado de Gestión Administrativa:
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Gestión de procesos administrativos y operativos.</li>
+                            <li>Administración de recursos humanos, materiales y logísticos.</li>
+                            <li>Registro y seguimiento de actividades institucionales.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        SIAF – Sistema Integrado de Administración Financiera:
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Formulación, ejecución y control del presupuesto público.</li>
+                            <li>Gestión de tesorería, contabilidad y reportes financieros.</li>
+                            <li>Seguimiento de compromisos, devengados y pagos de la entidad.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        SIAF – Sistema Integrado de Administración Financiera:
+                    </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Procesos de contratación pública y licitaciones electrónicas.</li>
+                            <li>Registro y supervisión de convocatorias, adjudicaciones y contratos.</li>
+                            <li>Cumplimiento de la normativa de contrataciones y transparencia en adquisiciones.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="container text-center course-intro lead">
+                    <p>Estos cursos proporcionan a los servidores públicos las competencias técnicas y operativas necesarias para gestionar de manera eficiente los sistemas electrónicos y los procesos digitales del sector público, fortaleciendo la transparencia, la eficiencia y la atención al ciudadano, en línea con las políticas de modernización y digitalización del Estado.</p>
+                </div>
+            <div class="course-cards row mt-4">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="/img/IGC 1.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-label">Curso</p>
+                            <h5 class="card-title">Gestion Pública y Modernización del Estado</h5>
+                            <div class="card-meta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14 3h-1V1.5a.5.5 0 0 0-1 0V3H4V1.5a.5.5 0 0 0-1 0V3H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM1 14V5a1 1 0 0 1 1-1h1v1.5a.5.5 0 0 0 1 0V4h6v1.5a.5.5 0 0 0 1 0V4h1a1 1 0 0 1 1 1v9H1z"/></svg><small>Inicio de clases</small></div>
+                            <a href="/informacion-cursos/gestion-publica.modernizacion-estado" class="card-more">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="/img/IGC 2.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-label">Curso</p>
+                            <h5 class="card-title">Planeamiento Estratégico</h5>
+                            <div class="card-meta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14 3h-1V1.5a.5.5 0 0 0-1 0V3H4V1.5a.5.5 0 0 0-1 0V3H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM1 14V5a1 1 0 0 1 1-1h1v1.5a.5.5 0 0 0 1 0V4h6v1.5a.5.5 0 0 0 1 0V4h1a1 1 0 0 1 1 1v9H1z"/></svg><small>Inicio de clases</small></div>
+                            <a href="/informacion-cursos/planeamiento-estrategico" class="card-more">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="/img/IGC 3.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-label">Curso</p>
+                            <h5 class="card-title">Sistema Nacional de Inversiones INVIERTE.PE</h5>
+                            <div class="card-meta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14 3h-1V1.5a.5.5 0 0 0-1 0V3H4V1.5a.5.5 0 0 0-1 0V3H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM1 14V5a1 1 0 0 1 1-1h1v1.5a.5.5 0 0 0 1 0V4h6v1.5a.5.5 0 0 0 1 0V4h1a1 1 0 0 1 1 1v9H1z"/></svg><small>Inicio de clases</small></div>
+                            <a href="/informacion-cursos/sistema-nacional-inversiones" class="card-more">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="/img/IGC 4.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-label">Curso</p>
+                            <h5 class="card-title">Obras Públicas Por Administración Directa</h5>
+                            <div class="card-meta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14 3h-1V1.5a.5.5 0 0 0-1 0V3H4V1.5a.5.5 0 0 0-1 0V3H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM1 14V5a1 1 0 0 1 1-1h1v1.5a.5.5 0 0 0 1 0V4h6v1.5a.5.5 0 0 0 1 0V4h1a1 1 0 0 1 1 1v9H1z"/></svg><small>Inicio de clases</small></div>
+                            <a href="/informacion-cursos/obras-publicas-administracion-directo" class="card-more">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="/img/IGC 1.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-label">Curso</p>
+                            <h5 class="card-title">Ofimatica Profesional</h5>
+                            <div class="card-meta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14 3h-1V1.5a.5.5 0 0 0-1 0V3H4V1.5a.5.5 0 0 0-1 0V3H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM1 14V5a1 1 0 0 1 1-1h1v1.5a.5.5 0 0 0 1 0V4h6v1.5a.5.5 0 0 0 1 0V4h1a1 1 0 0 1 1 1v9H1z"/></svg><small>Inicio de clases</small></div>
+                            <a href="/informacion-cursos/ofimatica-profesional" class="card-more">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</BaseLayout>
+
+
