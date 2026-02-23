@@ -5,12 +5,7 @@
     --dp-muted: #5d6672;
     --dp-surface: #ffffff;
     --dp-surface-soft: #f5f9ff;
-    --dp-border: #dce5f2;
     --dp-shadow: 0 14px 35px rgba(0, 27, 122, 0.08);
-    background:
-        radial-gradient(circle at 0% -10%, rgba(42, 127, 166, 0.12), transparent 38%),
-        radial-gradient(circle at 100% 0%, rgba(0, 27, 122, 0.1), transparent 35%),
-        linear-gradient(180deg, #f5f8fe 0%, #edf3fb 100%);
     padding: clamp(42px, 5vw, 72px) 20px 74px;
 }
 
@@ -25,22 +20,6 @@
     padding: clamp(24px, 4vw, 42px) clamp(20px, 4vw, 38px);
     box-shadow: var(--dp-shadow);
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-}
-
-.contenido-diplomado .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--dp-primary) 0%, var(--dp-secondary) 100%);
-}
-
-.contenido-diplomado .container:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 42px rgba(0, 27, 122, 0.11);
-    border-color: #cad8ee;
 }
 
 .contenido-diplomado .container:last-child {
