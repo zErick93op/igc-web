@@ -120,6 +120,7 @@
     .contenido-diplomado .section-title {
         font-size: 1.3rem;
         margin-bottom: 16px;
+        letter-spacing: 1px;
     }
 
     .contenido-diplomado h3 {
