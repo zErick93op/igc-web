@@ -1,0 +1,105 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const modules = import.meta.glob('../../content/blog/*.md', { eager: true });
+
+const posts = Object.entries(modules).map(([path, mod]) => {
+    const slug = path.split('/').pop().replace('.md', '');
+    return { slug, ...mod.frontmatter, Content: mod.default };
+}).sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+---
+
+
+<BlogLayout title="Blog - IGC">
+  <div class="container my-5 blog-list">
+		<h1 class="mb-4">Blog - IGC</h1>
+
+		<div class="row">
+			{posts.map(post => (
+				<div class="col-md-4 mb-4">
+					<div class="card h-100">
+						<div class="card-body d-flex flex-column">
+							<h5 class="card-title">{post.title}</h5>
+							{post.image ? <img src={post.image} alt={post.title} class="card-img mb-3" style="height:180px; border-radius:6px;" /> : null}
+							<p class="card-text text-muted">{post.pubDate}</p>
+							<p class="card-text">{post.description}</p>
+							<div class="mt-auto text-center">
+								<button class="btn btn-primary open-post" data-slug={post.slug}>Leer</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+
+	<!-- Contenido de modales (oculto) -->
+	<div id="blog-modals">
+		{posts.map(post => (
+			<div class="blog-modal" id={`modal-${post.slug}`} aria-hidden="true" style="display:none;">
+				<div class="modal-backdrop"></div>
+				<div class="modal-panel">
+					<button class="modal-close btn-close" aria-label="Cerrar">×</button>
+					<h2>{post.title}</h2>
+					{post.image ? <img src={post.image} alt={post.title} class="modal-hero"/> : null}
+					<p class="text-muted">{post.pubDate} — {post.author}</p>
+					<article class="modal-article"><post.Content /></article>
+				</div>
+			</div>
+		))}
+	</div>
+
+	<style>
+		.blog-modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:200001; }
+		.blog-modal[aria-hidden="true"] { display:none; }
+		.modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+		.modal-panel { position:relative; background:#fff; max-width:900px; width:100%; max-height:90vh; overflow:auto; padding:1.5rem; border-radius:6px; box-shadow:0 6px 20px rgba(0,0,0,0.2); z-index:200002; }
+		.modal-close { position:absolute; right:0.5rem; top:0.5rem; background:transparent; border:none; font-size:1.5rem; }
+		.modal-article img { max-width:100%; height:auto; }
+	</style>
+
+	<script is:inline>
+		(() => {
+			const openBtns = document.querySelectorAll('.open-post');
+			const body = document.body;
+			function openModal(slug) {
+				const modal = document.getElementById(`modal-${slug}`);
+				if (!modal) return;
+				modal.style.display = 'flex';
+				modal.setAttribute('aria-hidden', 'false');
+				body.style.overflow = 'hidden';
+				// focus first focusable element inside modal
+				const focusable = modal.querySelector('button, a, input, textarea, [tabindex]');
+				if (focusable) focusable.focus();
+			}
+			function closeModal(modal) {
+				if (!modal) return;
+				modal.style.display = 'none';
+				modal.setAttribute('aria-hidden', 'true');
+				body.style.overflow = '';
+			}
+
+			openBtns.forEach(btn => {
+				btn.addEventListener('click', (e) => {
+					const slug = btn.dataset.slug;
+					openModal(slug);
+				});
+			});
+
+			document.addEventListener('click', (e) => {
+				if (e.target.matches('.modal-backdrop, .modal-close')) {
+					const modal = e.target.closest('.blog-modal');
+					if (modal) closeModal(modal);
+				}
+			});
+
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') {
+					const open = document.querySelector('.blog-modal[aria-hidden="false"]');
+					if (open) closeModal(open);
+				}
+			});
+		})();
+	</script>
+</BaseLayout>
+
