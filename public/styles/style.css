@@ -174,6 +174,12 @@ header {
 
 /* Mobile: single column, collapsible */
 @media (max-width: 768px){
+    /* make mobile menu scrollable and constrain width */
+    .nav-menu {
+        overflow-x: hidden;
+        max-height: calc(100vh - 80px);
+    }
+
     .links-down{
         position: static;
         box-shadow: none;
@@ -185,13 +191,13 @@ header {
         max-height: calc(100vh - 220px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        /* asegurar que no genere columnas horizontalmente */
+        column-count: 1;
     }
     .nav-menu li.open > .links-down{
-        /* usar grid responsivo: adapta 1 o 2 columnas según el ancho disponible */
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 8px;
-        align-items: start;
+        /* simple block list para evitar rompimientos */
+        display: block;
+        width: 100%;
         visibility: visible;
         opacity: 1;
         transform: none;
@@ -201,7 +207,7 @@ header {
         display: block;
         padding: 8px 10px;
         background: #fff;
-        margin: 6px;
+        margin: 6px 0;
         border-radius: 6px;
         width: auto;
         white-space: normal;

@@ -217,4 +217,88 @@ details{
 }
 
 
-/*MODO RESPONSIVO*/ /*aun falta por hacer*/
+/*MODO RESPONSIVO*/
+
+/* general adjustments */
+@media (max-width: 992px) {
+    .container-objetivos {
+        margin: 0 20px;
+    }
+    .sub-tittle {
+        font-size: 1.6rem;
+        margin: 40px 0 25px;
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:768px){
+    .hero-section {
+        padding: 60px 15px;
+    }
+    .hero-section h1 {
+        font-size: 2.4rem;
+    }
+    .hero-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .badges {
+        gap: 10px;
+    }
+
+    .container, .container-objetivos, .container-metodologia, .contenedor-certificacion {
+        padding: 40px 15px;
+        margin: 0;
+    }
+
+    .grid-objetivos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .cards-flex {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-estudios {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:480px) {
+    .hero-section {
+        padding: 50px 10px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section h2 {
+        font-size: 1.2rem;
+    }
+    .sub-tittle {
+        font-size: 1.4rem;
+    }
+    .cards {
+        padding: 20px;
+    }
+    .objetivos-list {
+        padding: 15px;
+    }
+    .mini-contenedor {
+        padding: 20px;
+    }
+    details {
+        padding: 8px;
+    }
+    .card-certificacion {
+        padding: 20px;
+    }
+}
