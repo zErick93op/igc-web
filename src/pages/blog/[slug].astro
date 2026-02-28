@@ -4,15 +4,12 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 const modules = import.meta.glob('../../content/blog/*.md', { eager: true });
 const slug = Astro.params.slug;
 
-const entry = Object.entries(modules).find(([path]) => path.endsWith(`${slug}.md`));
+const entry = Object.entries(modules).find(([path]) =>
+  path.endsWith(`${slug}.md`)
+);
 
 if (!entry) {
-	const NotFound = () => (
-		<BaseLayout title="No encontrado">
-			<div class="container my-5"><h1>Publicación no encontrada</h1></div>
-		</BaseLayout>
-	);
-	return NotFound();
+  throw new Error("Publicación no encontrada");
 }
 
 const mod = entry[1];
@@ -20,12 +17,23 @@ const Post = mod.default;
 ---
 
 <BlogLayout title={mod.frontmatter.title}>
-	<div class="container my-5">
-		<h1>{mod.frontmatter.title}</h1>
-		{mod.frontmatter.image ? <img src={mod.frontmatter.image} alt={mod.frontmatter.title} class="post-hero" /> : null}
-		<p class="text-muted">{mod.frontmatter.pubDate} — {mod.frontmatter.author}</p>
-		<article class="post-article">
-			<Post />
-		</article>
-	</div>
+  <div class="container my-5">
+    <h1>{mod.frontmatter.title}</h1>
+
+    {mod.frontmatter.image && (
+      <img
+        src={mod.frontmatter.image}
+        alt={mod.frontmatter.title}
+        class="post-hero"
+      />
+    )}
+
+    <p class="text-muted">
+      {mod.frontmatter.pubDate} — {mod.frontmatter.author}
+    </p>
+
+    <article class="post-article">
+      <Post />
+    </article>
+  </div>
 </BlogLayout>
