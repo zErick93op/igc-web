@@ -1,14 +1,14 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const posts = import.meta.glob('../../content/blog/*.md', { eager: true });
-
 export async function getStaticPaths() {
-  return Object.entries(posts).map(([path, mod]) => {
+  const posts = import.meta.glob('../../content/blog/*.md', { eager: true });
+
+  return Object.entries(posts).map(([path, post]) => {
     const slug = path.split('/').pop().replace('.md', '');
     return {
       params: { slug },
-      props: { post: mod }
+      props: { post }
     };
   });
 }
