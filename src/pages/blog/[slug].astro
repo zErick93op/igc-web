@@ -1,35 +1,36 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 
-const modules = import.meta.glob('../../content/blog/*.md', { eager: true });
-const slug = Astro.params.slug;
+const posts = import.meta.glob('../../content/blog/*.md', { eager: true });
 
-const entry = Object.entries(modules).find(([path]) =>
-  path.endsWith(`${slug}.md`)
-);
-
-if (!entry) {
-  throw new Error("Publicación no encontrada");
+export async function getStaticPaths() {
+  return Object.entries(posts).map(([path, mod]) => {
+    const slug = path.split('/').pop().replace('.md', '');
+    return {
+      params: { slug },
+      props: { post: mod }
+    };
+  });
 }
 
-const mod = entry[1];
-const Post = mod.default;
+const { post } = Astro.props;
+const Post = post.default;
 ---
 
-<BlogLayout title={mod.frontmatter.title}>
+<BlogLayout title={post.frontmatter.title}>
   <div class="container my-5">
-    <h1>{mod.frontmatter.title}</h1>
+    <h1>{post.frontmatter.title}</h1>
 
-    {mod.frontmatter.image && (
+    {post.frontmatter.image && (
       <img
-        src={mod.frontmatter.image}
-        alt={mod.frontmatter.title}
+        src={post.frontmatter.image}
+        alt={post.frontmatter.title}
         class="post-hero"
       />
     )}
 
     <p class="text-muted">
-      {mod.frontmatter.pubDate} — {mod.frontmatter.author}
+      {post.frontmatter.pubDate} — {post.frontmatter.author}
     </p>
 
     <article class="post-article">
