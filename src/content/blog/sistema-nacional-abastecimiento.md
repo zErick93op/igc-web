@@ -3,7 +3,7 @@ title: "Sistema Nacional de Abastecimiento"
 pubDate: "2026-02-25"
 description: "SNA: gestión integral de bienes, servicios, contrataciones y patrimonio en el Estado."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/Sistema-Nacional-de-Abastecimiento.webp"
+image: "/cards-blog/Sistema Nacional de Abastecimiento.webp"
 ---
 
 ## ¿Qué es el Sistema Nacional de Abastecimiento?

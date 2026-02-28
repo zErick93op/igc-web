@@ -3,7 +3,7 @@ title: "Sistema Nacional de Endeudamiento Público"
 pubDate: "2026-02-25"
 description: "Regulación y gestión de la deuda pública del Estado Peruano de manera responsable y sostenible."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/SISTEMA-NACIONAL-DE-INVERSIÓN-PÚBLICA.webp"
+image: "/cards-blog/Sistema Nacional de Endeudamiento Público.webp"
 ---
 
 ## ¿Qué es el Sistema de Endeudamiento Público?

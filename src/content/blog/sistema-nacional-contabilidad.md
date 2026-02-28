@@ -3,7 +3,7 @@ title: "Sistema Nacional de Contabilidad"
 pubDate: "2026-02-25"
 description: "Sistema de registro, procesamiento y presentación de información contable del Sector Público."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/Sistema-Nacional-de-Contabilidad.webp"
+image: "/cards-blog/Sistema Nacional de Contabilidad.webp"
 ---
 
 ## ¿Qué es el Sistema de Contabilidad?

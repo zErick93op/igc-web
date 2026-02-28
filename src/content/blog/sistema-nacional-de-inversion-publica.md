@@ -3,7 +3,7 @@ title: "Sistema Nacional De Inversión Pública"
 pubDate: "2026-02-25"
 description: "Resumen sobre Invierte.pe, ente rector y marco legal."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/SISTEMA-NACIONAL-DE-INVERSIÓN-PÚBLICA.webp"
+image: "/cards-blog/Sistema Nacional De Inversión Pública.webp"
 ---
 
 # SISTEMA NACIONAL DE   INVERSIÓN PÚBLICA

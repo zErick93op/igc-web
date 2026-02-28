@@ -3,7 +3,7 @@ title: "Sistemas Electrónicos de Gestión Pública"
 pubDate: "2026-02-25"
 description: "SIGA, SIAF y SEACE: herramientas clave para optimizar procesos administrativos y financieros del Estado."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/SISTEMA-NACIONAL-DE-INVERSIÓN-PÚBLICA.webp"
+image: "/cards-blog/Sistemas Electrónicos de Gestión Pública.webp"
 ---
 
 Los sistemas electrónicos de gestión pública forman parte del Sistema de Tecnologías de la Información, orientado a optimizar los procesos administrativos, mejorar la toma de decisiones y fortalecer la transparencia, eficiencia e integridad en la administración pública.

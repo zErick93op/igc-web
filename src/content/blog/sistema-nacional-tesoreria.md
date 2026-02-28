@@ -3,7 +3,7 @@ title: "Sistema Nacional de Tesorería"
 pubDate: "2026-02-25"
 description: "Conoce el SNT, su marcos legal y la administración de fondos públicos en el Estado Peruano."
 author: "Instituto de Gerencia Intercontinental"
-image: "/cards-blog/SISTEMA-NACIONAL-DE-INVERSIÓN-PÚBLICA.webp"
+image: "/cards-blog/Sistema Nacional de Tesorería.webp"
 ---
 
 ## ¿Qué es el Sistema de Tesorería?
