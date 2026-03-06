@@ -1,18 +1,42 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Presupuesto Público: Ciclo, Programación y Ejecución";
 const backHref = "/cursos-gestion/gestion-presupuestaria-financiera";
+
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso desarrolla los conceptos, herramientas y procedimientos necesarios para una adecuada programación, formulación, ejecución y evaluación del presupuesto en las entidades del sector público, en el marco del enfoque por resultados y la normativa vigente.",
+  objetivo: "Fortalecer las capacidades de los participantes para gestionar eficientemente el presupuesto público, articulando la planificación, asignación y uso de los recursos públicos de manera transparente y orientada a resultados.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de los conocimientos en el entorno institucional.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas programadas, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión del presupuesto público y administración financiera del sector público.",
+  },
+  modulos: [
+    { titulo: "Fundamentos del Presupuesto Público", temas: ["o	Sistema Nacional de Presupuesto", "Principios, objetivos y marco normativo"] },
+    { titulo: "Programación y Formulación Presupuestal", temas: ["Programación multianual", "Formulación del presupuesto institucional"] },
+    { titulo: "Ejecución del Presupuesto Público", temas: ["Gestión del gasto público", "Modificaciones presupuestarias"] },
+    { titulo: "Presupuesto por Resultados (PpR)", temas: ["Enfoque y herramientas del PpR", "Articulación con la planificación institucional"] },
+    { titulo: "Seguimiento, Evaluación y Control Presupuestal", temas: ["Monitoreo de la ejecución", "	Control, transparencia y rendición de cuentas"] },
+    { titulo: "Buenas Prácticas en la Gestión Presupuestaria", temas: ["Casos y experiencias en el sector público", "Aplicación práctica en la entidad"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
+    <SubCursoInfo course={curso}/>
 
   </section>
 </InfoLayout>

@@ -1,19 +1,43 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "SIGA: Módulos Logístico, Patrimonio y Presupuesto";
 const backHref = "/cursos-gestion/sistema-nacional-de-abastecimiento";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso proporciona conocimientos y habilidades para la correcta utilización del Sistema Integrado de Gestión Administrativa (SIGA), enfocándose en los módulos logístico, de patrimonio y presupuesto. Se orienta a optimizar la administración de bienes, recursos y procesos financieros dentro de las entidades públicas, promoviendo eficiencia, control y transparencia.",
+  objetivo: "Fortalecer las capacidades de los participantes para manejar los módulos logístico, patrimonio y presupuesto del SIGA, garantizando una gestión eficiente de los recursos públicos y la correcta ejecución de los procesos administrativos y financieros.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación real del SIGA en la gestión pública.",
+  evaluacion: "La evaluación considera la asistencia obligatoria, el cumplimiento de una nota mínima aprobatoria y la realización de actividades prácticas dentro del sistema SIGA, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión administrativa, patrimonial y presupuestaria, con manejo avanzado del SIGA en el sector público.",
+  },
+  modulos: [
+    { titulo: "Introducción al SIGA y Marco Normativo", temas: ["Conceptos generales del SIGA", "Normativa y lineamientos de gestión administrativa"] },
+    { titulo: "Módulo Logístico", temas: ["Gestión de bienes y servicios", "Procedimientos de adquisición, almacenamiento y distribución"] },
+    { titulo: "Módulo Patrimonio", temas: ["Registro y control de bienes patrimoniales", "Inventarios y administración de activos"] },
+    { titulo: "Módulo Presupuesto", temas: ["Programación y ejecución presupuestaria", "Control de gastos y seguimiento financiero"] },
+    { titulo: "Transparencia y Control Interno en SIGA", temas: ["Indicadores de eficiencia y control de procesos", "Buenas prácticas y supervisión"] },
+    { titulo: "Aplicación Práctica", temas: ["Ejercicios prácticos en SIGA", "Integración de módulos y casos reales de gestión"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
-
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+    
+    <SubCursoInfo course={curso}/>
+  
   </section>
 </InfoLayout>
 

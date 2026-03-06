@@ -1,21 +1,77 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
 const pageTitle = "Gestión Pública en Salud";
 const backHref = "/cursos-gestion/gestion-publica-salud";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion:"Este curso proporciona conocimientos y herramientas para planificar, organizar, dirigir y supervisar los servicios de salud en el sector público. Se enfoca en la mejora de la eficiencia, calidad, transparencia y accesibilidad de los servicios, garantizando una gestión orientada a la salud integral de la población.",
+  objetivo:"Fortalecer las capacidades de los participantes para gestionar de manera eficiente los servicios de salud pública, aplicando buenas prácticas, normas sanitarias y estrategias orientadas a la mejora continua, la transparencia y la atención centrada en el ciudadano.",
+  metodologia:"El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de herramientas y estrategias de gestión pública en salud.",
+  evaluacion:"La evaluación considera la asistencia obligatoria, el cumplimiento de una nota mínima aprobatoria y la realización de actividades prácticas de análisis y planificación de servicios de salud, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion:"La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion:
+      "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión pública en salud, administración hospitalaria y control de servicios sanitarios.",
+  },
+  modulos: [
+    {
+      titulo: "Introducción a la Gestión Pública en Salud",
+      temas: [
+        "Conceptos, principios y objetivos",
+        "Marco normativo y regulatorio del sector salud",
+      ],
+    },
+    {
+      titulo: "Planificación y Programación de Servicios de Salud",
+      temas: [
+        "Planes estratégicos y operativos",
+        "Distribución de recursos humanos, financieros y materiales",
+      ],
+    },
+    {
+      titulo: "Gestión Administrativa y Financiera en Salud",
+      temas: [
+        "Control presupuestario y gestión de recursos",
+        "Sistemas de información y seguimiento de indicadores",
+      ],
+    },
+    {
+      titulo: "Calidad, Eficiencia y Transparencia en los Servicios de Salud",
+      temas: [
+        "Mejora continua y aseguramiento de la calidad",
+        "Buenas prácticas y control interno",
+      ],
+    },
+    {
+      titulo: "Gestión del Talento Humano y Coordinación Interinstitucional",
+      temas: [
+        "Liderazgo y desarrollo de equipos en salud pública",
+        "Coordinación entre niveles de atención y entidades",
+      ],
+    },
+    {
+      titulo: "Aplicación Práctica y Casos de Éxito",
+      temas: [
+        "Ejercicios prácticos de planificación y gestión",
+        "Análisis de experiencias exitosas en servicios de salud",
+      ],
+    },
+  ],
+};
 ---
-<InfoLayout title={`${pageTitle} | Información`}> 
+<InfoLayout title={`${pageTitle} | Información`}>
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+    <SubCursoInfo course={curso} />
   </section>
 </InfoLayout>
-
-
-

@@ -1,19 +1,43 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Gestión de Tesorería y Gestión de Caja";
 const backHref = "/cursos-gestion/gestion-presupuestaria-financiera";
+
+const curso =  {
+  titulo: pageTitle,
+  intro:"",
+  presentacion: "Este curso desarrolla los conceptos, procesos y herramientas necesarias para la adecuada administración de los recursos financieros del Estado, asegurando la liquidez, oportunidad y correcta utilización de los fondos públicos, en concordancia con la normativa vigente.",
+  objetivo: "Fortalecer las capacidades de los participantes para gestionar eficientemente la tesorería gubernamental, optimizando los flujos de caja y garantizando el uso responsable, transparente y oportuno de los recursos públicos.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de los conocimientos en el contexto institucional.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas programadas, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión de tesorería gubernamental y administración financiera del sector público.",
+  },
+  modulos: [
+    { titulo: "1.	Fundamentos de la Tesorería Gubernamental", temas: ["Sistema Nacional de Tesorería", "Principios, objetivos y marco normativo"] },
+    { titulo: "2.	Gestión de Caja y Programación Financiera", temas: ["Programación de ingresos y gastos", "Administración de flujos de caja"] },
+    { titulo: "3.	Operaciones de Tesorería", temas: ["Pagos, recaudación y manejo de fondos públicos", "Cuentas bancarias y medios de pago"] },
+    { titulo: "4.	Tesorería y Sistemas Administrativos del Estado", temas: ["Articulación con presupuesto, contabilidad y abastecimiento", "Uso de sistemas informáticos de tesorería"] },
+    { titulo: "5.	Control, Transparencia y Riesgos en Tesorería", temas: ["Control interno y rendición de cuentas", "Gestión de riesgos financieros"] },
+    { titulo: "6.	Buenas Prácticas en la Gestión de Tesorería", temas: ["Casos y experiencias en el sector público", "Aplicación práctica en la entidad"] },
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
+  <section class="info-curso">
+
   <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+  <SubCursoInfo course = {curso}/>
   </section>
 </InfoLayout>
 

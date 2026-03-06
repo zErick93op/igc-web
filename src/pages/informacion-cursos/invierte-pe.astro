@@ -1,0 +1,43 @@
+---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
+
+const pageTitle = "Invierte.pe";
+const backHref = "/cursos-gestion/inversion-publica";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso proporciona conocimientos y herramientas para la planificación, programación, ejecución y supervisión de inversiones públicas, utilizando la plataforma electrónica Invierte.pe. Se orienta a garantizar la eficiencia, transparencia y control en la gestión de proyectos de inversión, contribuyendo al desarrollo y optimización del gasto público.",
+  objetivo: "Fortalecer las capacidades de los participantes para gestionar proyectos de inversión pública mediante la correcta utilización de la plataforma Invierte.pe, asegurando planificación eficiente, seguimiento adecuado y transparencia en la ejecución de los recursos.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de la plataforma en los procesos de inversión pública.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y la realización de ejercicios prácticos en la plataforma Invierte.pe, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en inversión pública, gestión de proyectos y uso de plataformas electrónicas para la administración pública.",
+  },
+  modulos: [
+    { titulo: "Introducción a la Gestión de Proyectos de Inversión Pública", temas: ["Conceptos, objetivos y fases del ciclo de inversión", "Marco normativo y regulatorio de la inversión pública"] },
+    { titulo: "Plataforma Invierte.pe: Conceptos y Funcionalidades", temas: ["Estructura y módulos de Invierte.pe", "Registro, seguimiento y control de proyectos"] },
+    { titulo: "Planificación y Programación de Inversiones", temas: ["Identificación de proyectos y priorización", "Programación presupuestaria y asignación de recursos"] },
+    { titulo: "Ejecución y Seguimiento de Proyectos", temas: ["Control de avances físicos y financieros", "Gestión de riesgos y evaluación de resultados"] },
+    { titulo: "Transparencia y Rendición de Cuentas", temas: ["Publicidad de proyectos y reportes de gestión", "Buenas prácticas en el uso de Invierte.pe"] },
+    { titulo: "Aplicación Práctica", temas: ["Ejercicios en la plataforma Invierte.pe", "Casos prácticos de gestión de proyectos de inversión"] }
+  ]
+}
+---
+<InfoLayout title={`${pageTitle} | Información`}> 
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
+  </Fragment>
+
+  <section class="info-curso">
+
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+    
+    <SubCursoInfo course={curso}/>
+  
+  </section>
+</InfoLayout>
+

@@ -1,18 +1,44 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Normas Internacionales de Contabilidad NICs";
 const backHref = "/cursos-gestion/gestion-presupuestaria-financiera";
+
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso desarrolla los principios, criterios y lineamientos establecidos por las normas contables internacionales, orientados a la correcta preparación, presentación y análisis de la información financiera, garantizando transparencia, comparabilidad y calidad en los estados financieros.",
+  objetivo: "Fortalecer las capacidades de los participantes para aplicar adecuadamente las Normas Internacionales de Contabilidad en el registro, presentación y análisis de la información financiera, conforme a estándares internacionales y normativa vigente.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de las normas contables en casos reales.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas programadas, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en contabilidad financiera y aplicación de Normas Internacionales de Contabilidad.",
+  },
+  modulos: [
+    { titulo: "Introducción a las Normas Internacionales de Contabilidad", temas: ["Marco conceptual y objetivos de las NICs", "Alcance y estructura de las normas internacionales"] },
+    { titulo: "Presentación de Estados Financieros (NIC 1)", temas: ["Estados financieros básicos", "	Políticas contables y revelaciones"] },
+    { titulo: "Activos según las NICs", temas: ["Propiedad, planta y equipo (NIC 16)", "Inventarios (NIC 2) e intangibles (NIC 38)"] },
+    { titulo: "Pasivos, Provisiones y Beneficios a los Empleados", temas: ["Provisiones y contingencias (NIC 37)", "Beneficios a los empleados (NIC 19)"] },
+    { titulo: "Ingresos, Costos y Resultados", temas: ["Reconocimiento de ingresos", "Costos financieros y resultados del ejercicio"] },
+    { titulo: "Aplicación Práctica de las NICs", temas: ["Casos prácticos y análisis de estados financieros", "Impacto de las NICs en la gestión financiera"] },
+
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
+  <section class="info-curso">
+
   <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
+  <SubCursoInfo course={curso}/>
 
   </section>
 </InfoLayout>

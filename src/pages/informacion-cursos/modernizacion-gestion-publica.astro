@@ -1,19 +1,44 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
 const pageTitle = "Modernización de la Gestión Pública";
 const backHref = "/cursos-gestion/gestion-publica-estrategica-planeamiento";
+
+const curso = {    // ← data
+  titulo: pageTitle,
+  intro: "Este curso brinda herramientas clave para fortalecer la eficiencia, la transparencia y la innovación en la gestión pública, incorporando enfoques de modernización, transformación digital y buenas prácticas orientadas a un servicio público ágil y centrado en el ciudadano.",
+  presentacion: "El curso aborda los principales enfoques y tendencias de la Gestión Pública y la Modernización del Estado, incorporando innovación, transformación digital y buenas prácticas orientadas a mejorar el desempeño de las entidades públicas y la calidad del servicio al ciudadano.",
+  objetivo: "Fortalecer las capacidades de los participantes para aplicar criterios modernos y eficientes en la gestión pública, alineados a las tendencias actuales y a las demandas del Estado moderno.",
+  metodologia: "Educación ejecutiva dirigida a adultos, basada en principios de andragogía, con un enfoque práctico, participativo y orientado a la aplicación real de los conocimientos en el ámbito laboral.",
+  evaluacion: "La aprobación del curso requiere el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas establecidas.",
+  certificacion: "La certificación es válida conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Especialistas de amplia trayectoria y reconocida experiencia, con sólida formación y desempeño en el ámbito de la gestión pública.",
+  },
+  modulos: [
+    { titulo: "Fundamentos de la Gestión Pública", temas: ["Estado, gobierno y administración pública", "Principios y enfoque de la gestión pública moderna"] },
+    { titulo: "Modernización del Estado", temas: ["Políticas de modernización y reforma del Estado", "Gestión por resultados y mejora continua"] },
+    { titulo: "Tendencias Actuales en la Gestión Pública", temas: ["Innovación pública y valor público", "Gobierno digital y transformación digital"] },
+    { titulo: "Gestión de Procesos y Calidad en el Sector Público", temas: ["Simplificación administrativa", "Enfoque en el ciudadano y calidad del servicio"] },
+    { titulo: "Transparencia, Ética y Buen Gobierno", temas: ["Transparencia y acceso a la información", "Integridad pública y lucha contra la corrupción"] },
+    { titulo: "Buenas Prácticas en la Gestión Estatal", temas: ["Experiencias exitosas en el sector público", "Aplicación práctica en el contexto institucional"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
-
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+    
+    <SubCursoInfo course={curso}/>
+  
   </section>
 </InfoLayout>
 

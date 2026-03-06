@@ -1,0 +1,196 @@
+---
+interface Modulo {
+  titulo: string;
+  temas: string[];
+}
+
+interface Docente {
+  nombre: string;
+  descripcion: string;
+  foto?: string;
+}
+
+interface Course {
+  titulo: string;
+  intro: string;
+  presentacion: string;
+  objetivo: string;
+  metodologia: string;
+  evaluacion: string;
+  certificacion: string;
+  imagen?: string;
+  docente: Docente;
+  modulos: Modulo[];
+}
+
+interface Props {
+  course: Course;
+}
+
+const { course } = Astro.props;
+---
+
+<section class="course-info">
+
+  <!-- HERO -->
+  <div class="course-hero reveal">
+    {course.imagen && (
+      <img class="hero-img" src={course.imagen} alt={course.titulo} />
+    )}
+    <div class="hero-pattern"></div>
+    <div class="hero-badge">
+      <div class="servir-dot"></div>
+      <span>Válido SERVIR</span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Programa de Capacitación</div>
+      <h1 class="hero-title">{course.titulo}</h1>
+    </div>
+  </div>
+
+  <div class="course-body">
+
+    <!-- INTRO -->
+    <div class="intro-banner reveal">
+      <p>{course.intro}</p>
+    </div>
+
+    <!-- SECCIONES -->
+    <div class="sections-grid">
+
+      <div class="course-section reveal reveal-delay-1">
+        <div class="section-header">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </span>
+          <h3>Presentación</h3>
+        </div>
+        <p>{course.presentacion}</p>
+      </div>
+
+      <div class="course-section reveal reveal-delay-2">
+        <div class="section-header">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </span>
+          <h3>Objetivo</h3>
+        </div>
+        <p>{course.objetivo}</p>
+      </div>
+
+      <div class="course-section reveal reveal-delay-3">
+        <div class="section-header">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </span>
+          <h3>Metodología</h3>
+        </div>
+        <p>{course.metodologia}</p>
+      </div>
+
+      <div class="course-section reveal reveal-delay-4">
+        <div class="section-header">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </span>
+          <h3>Evaluación</h3>
+        </div>
+        <p>{course.evaluacion}</p>
+      </div>
+
+      <div class="course-section highlight-section reveal reveal-delay-5">
+        <div class="section-header">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </span>
+          <h3>Certificación</h3>
+        </div>
+        <p>{course.certificacion}</p>
+      </div>
+
+    </div>
+
+    <!-- TEMARIO -->
+    <div class="syllabus">
+      <div class="syllabus-header reveal">
+        <span class="syllabus-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/>
+            <line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/>
+            <line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+        </span>
+        <h2>Temario</h2>
+      </div>
+
+      <div class="modules-grid">
+        {course.modulos.map((modulo, index) => (
+          <div class={`module reveal reveal-delay-${(index % 6) + 1}`}>
+            <div class="module-number">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+            <div class="module-content">
+              <h4>{modulo.titulo}</h4>
+              <ul>
+                {modulo.temas.map((tema) => (
+                  <li>{tema}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- DOCENTE -->
+    <div class="teacher-block reveal">
+      <div class="teacher-avatar">
+        {course.docente.foto ? (
+          <img class="avatar-img" src={course.docente.foto} alt={course.docente.nombre} />
+        ) : (
+          <div class="avatar-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+        )}
+        <div class="avatar-ring"></div>
+      </div>
+      <div class="teacher-content">
+        <div class="teacher-label">Equipo Docente</div>
+        <h3>{course.docente.nombre}</h3>
+        <p>{course.docente.descripcion}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

@@ -1,21 +1,77 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
 const pageTitle = "Delitos contra la Administración Pública";
 const backHref = "/cursos-gestion/derecho-penal-funcion-publica";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion:"Este curso aborda los tipos de delitos, infracciones y conductas ilícitas que afectan la gestión estatal, así como los mecanismos legales, éticos y administrativos para prevenir, sancionar y controlar estas conductas. Se centra en la protección de la integridad, transparencia y responsabilidad en el ejercicio de la función pública.",
+  objetivo:"Fortalecer las capacidades de los participantes para identificar, prevenir y gestionar situaciones relacionadas con delitos contra la administración pública, promoviendo la ética, la legalidad y la transparencia en la gestión estatal.",
+  metodologia:"El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada al análisis de casos reales y la aplicación de herramientas preventivas y de control.",
+  evaluacion:"La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y la realización de ejercicios prácticos de análisis de casos y resolución de conflictos, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion:"La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion:
+      "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en derecho administrativo, prevención de delitos y control interno en el sector público.",
+  },
+  modulos: [
+    {
+      titulo: "Introducción a los Delitos contra la Administración Pública",
+      temas: [
+        "Conceptos y clasificación de delitos",
+        "Marco normativo nacional e internacional",
+      ],
+    },
+    {
+      titulo: "Tipos de Delitos y Conductas Ilícitas",
+      temas: [
+        "Cohecho, peculado, malversación y concusión",
+        "Negociación incompatible, colusión y tráfico de influencias",
+      ],
+    },
+    {
+      titulo: "Prevención y Control de Delitos",
+      temas: [
+        "Herramientas de control interno y auditoría",
+        "Políticas de prevención y fortalecimiento de la ética pública",
+      ],
+    },
+    {
+      titulo: "Investigación y Sanción",
+      temas: [
+        "Procedimientos legales y administrativos",
+        "Rol de las entidades de control y fiscalización",
+      ],
+    },
+    {
+      titulo: "Transparencia y Rendición de Cuentas",
+      temas: [
+        "Mecanismos de transparencia en la gestión pública",
+        "Buenas prácticas para minimizar riesgos de delitos",
+      ],
+    },
+    {
+      titulo: "Aplicación Práctica y Análisis de Casos",
+      temas: [
+        "Estudio de casos reales y resolución de problemas",
+        "Estrategias para prevenir delitos en la administración pública",
+      ],
+    },
+  ],
+};
 ---
-<InfoLayout title={`${pageTitle} | Información`}> 
+<InfoLayout title={`${pageTitle} | Información`}>
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+    <SubCursoInfo course={curso} />
   </section>
 </InfoLayout>
-
-
-

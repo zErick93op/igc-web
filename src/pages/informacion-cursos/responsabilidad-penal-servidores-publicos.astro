@@ -1,20 +1,77 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
 const pageTitle = "Responsabilidad Penal de los Servidores Públicos";
 const backHref = "/cursos-gestion/derecho-penal-funcion-publica";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion:"Este curso aborda los fundamentos legales, normas y procedimientos relacionados con la responsabilidad penal de quienes ejercen funciones públicas. Se enfoca en la prevención de conductas ilícitas, el cumplimiento de la normativa y la promoción de la ética y la transparencia en la gestión estatal.",
+  objetivo:"Fortalecer las capacidades de los participantes para comprender y aplicar los conceptos de responsabilidad penal en la función pública, promoviendo la prevención de delitos, la ética profesional y la rendición de cuentas en la administración pública.",
+  metodologia:"El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada al análisis de casos, la identificación de riesgos y la aplicación de herramientas de control.",
+  evaluacion:"La evaluación considera la asistencia obligatoria, el cumplimiento de una nota mínima aprobatoria y la realización de ejercicios prácticos de análisis de casos de responsabilidad penal, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion:"La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion:
+      "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en derecho penal, responsabilidad administrativa y control interno en el sector público.",
+  },
+  modulos: [
+    {
+      titulo: "Introducción a la Responsabilidad Penal de los Servidores Públicos",
+      temas: [
+        "Conceptos, alcance y principios",
+        "Marco normativo nacional e internacional",
+      ],
+    },
+    {
+      titulo: "Delitos y Conductas Ilícitas Cometidas por Servidores Públicos",
+      temas: [
+        "Tipos de delitos: cohecho, peculado, concusión, malversación",
+        "Negociación incompatible, tráfico de influencias y colusión",
+      ],
+    },
+    {
+      titulo: "Procedimientos Legales y Sancionadores",
+      temas: [
+        "Procesos de investigación y judicialización",
+        "Rol de la Fiscalía, Contraloría y otras entidades de control",
+      ],
+    },
+    {
+      titulo: "Prevención y Control de Conductas Ilícitas",
+      temas: [
+        "Políticas de ética y responsabilidad en el servicio público",
+        "Herramientas de control interno y auditoría",
+      ],
+    },
+    {
+      titulo: "Transparencia y Rendición de Cuentas",
+      temas: [
+        "Buenas prácticas para la gestión responsable",
+        "Estrategias para minimizar riesgos de responsabilidad penal",
+      ],
+    },
+    {
+      titulo: "Aplicación Práctica y Casos Reales",
+      temas: [
+        "Análisis de casos de responsabilidad penal en el sector público",
+        "Estrategias preventivas y correctivas",
+      ],
+    },
+  ],
+};
 ---
-<InfoLayout title={`${pageTitle} | Información`}> 
+<InfoLayout title={`${pageTitle} | Información`}>
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+    <SubCursoInfo course={curso} />
   </section>
 </InfoLayout>
-
-

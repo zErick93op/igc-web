@@ -1,19 +1,44 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Gestión Estratégica y Planeamiento Estratégico";
 const backHref = "/cursos-gestion/gestion-publica-estrategica-planeamiento";
+
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "El curso desarrolla los enfoques, herramientas y tendencias necesarias para una adecuada formulación, implementación y seguimiento de planes estratégicos, alineados a las políticas públicas, objetivos institucionales y al desarrollo nacional.",
+  objetivo: "Fortalecer las capacidades de los participantes para diseñar y aplicar el planeamiento estratégico en las entidades públicas, articulando objetivos, indicadores y acciones estratégicas orientadas a resultados.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación real en el contexto institucional.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas programadas, conforme a los criterios establecidos.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en planeamiento estratégico y gestión pública en el sector público.",
+  },
+  modulos: [
+    { titulo: "Fundamentos del Planeamiento Estratégico en el Sector Público", temas: ["o	Planeamiento estratégico y gestión pública", "o	Marco normativo y alineamiento institucional"] },
+    { titulo: "Análisis Estratégico", temas: ["Diagnóstico institucional", "Análisis interno y externo"] },
+    { titulo: "Formulación del Planeamiento Estratégico", temas: ["Visión, misión y objetivos estratégicos", "Estrategias, metas e indicadores"] },
+    { titulo: "Articulación y Alineamiento Estratégico", temas: ["Vinculación con políticas públicas y planes nacionales", "Planeamiento estratégico y gestión por resultados"] },
+    { titulo: "Implementación y Seguimiento del Plan Estratégico", temas: ["Monitoreo, evaluación y mejora continua", "Gestión del desempeño institucional"] },
+    { titulo: "Buenas Prácticas en Planeamiento Estratégico", temas: ["o	Casos y experiencias en el sector público", "Aplicación práctica en la entidad"] }
+]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
-
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+    
+    <SubCursoInfo course={curso}/>
+  
   </section>
 </InfoLayout>
 

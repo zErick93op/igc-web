@@ -1,18 +1,43 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Gestión Logística y Sistema de Abastecimiento Público";
 const backHref = "/cursos-gestion/sistema-nacional-de-abastecimiento";
+
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "El curso de Gestión Logística y Sistema de Abastecimiento Público proporciona los conocimientos y herramientas necesarios para planificar, organizar y supervisar los procesos de abastecimiento en las entidades públicas, asegurando eficiencia, transparencia y control en la adquisición, almacenamiento y distribución de bienes y servicios.",
+  objetivo: "Fortalecer las capacidades de los participantes para gestionar de manera eficiente los procesos logísticos y de abastecimiento público, garantizando la disponibilidad de recursos, el cumplimiento normativo y la transparencia en la gestión de compras y suministros.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación real de los procesos logísticos y de abastecimiento en la gestión pública.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y la realización de actividades prácticas y ejercicios de aplicación, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión logística, abastecimiento público y control de recursos en el sector público.",
+  },
+  modulos: [
+    { titulo: "Fundamentos de Gestión Logística en el Sector Público", temas: ["Conceptos y objetivos de la logística pública", "Marco normativo del abastecimiento y control de bienes"] },
+    { titulo: "Planificación y Programación del Abastecimiento", temas: ["Planificación de compras y suministros", "Programación y priorización de necesidades"] },
+    { titulo: "Procesos de Adquisición y Contratación", temas: ["Procedimientos de compra y selección de proveedores", "Normativa aplicable y transparencia en contrataciones"] },
+    { titulo: "Gestión de Inventarios y Almacenamiento", temas: ["Control y registro de inventarios", "Sistemas de almacenamiento y distribución eficiente"] },
+    { titulo: "Control, Auditoría y Buenas Prácticas", temas: ["Supervisión y control interno en la logística pública", "Experiencias exitosas en gestión de abastecimiento"] },
+    { titulo: "Aplicación Práctica y Optimización de Procesos", temas: ["Casos prácticos de gestión logística", "Herramientas y técnicas para optimizar el abastecimiento público"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
+      <SubCursoForm title={pageTitle} backHref={backHref} />
+
+      <SubCursoInfo course = {curso}/>
 
   </section>
 </InfoLayout>

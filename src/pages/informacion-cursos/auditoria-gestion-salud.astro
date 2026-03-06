@@ -1,20 +1,77 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
-const pageTitle = "Auditoria  de la Gestión de Salud";
+const pageTitle = "Auditoría de la Gestión de Salud";
 const backHref = "/cursos-gestion/gestion-publica-salud";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion:"Este curso proporciona conocimientos y herramientas para evaluar, controlar y mejorar los procesos administrativos, financieros y operativos en los servicios de salud pública. Se enfoca en promover la eficiencia, transparencia, cumplimiento normativo y calidad en la prestación de servicios sanitarios.",
+  objetivo:"Fortalecer las capacidades de los participantes para realizar auditorías efectivas en la gestión de salud pública, identificando riesgos, oportunidades de mejora y asegurando la correcta utilización de recursos y el cumplimiento de normas y procedimientos.",
+  metodologia:"El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada al análisis de casos reales y ejercicios de auditoría aplicados al sector salud.",
+  evaluacion:"La evaluación considera la asistencia obligatoria, el cumplimiento de una nota mínima aprobatoria y la realización de ejercicios prácticos de auditoría, informes y análisis de gestión, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion:"La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion:
+      "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en auditoría, control interno y gestión pública en el sector salud.",
+  },
+  modulos: [
+    {
+      titulo: "Introducción a la Auditoría en Salud",
+      temas: [
+        "Conceptos, objetivos y tipos de auditoría",
+        "Marco normativo y regulatorio del sector salud",
+      ],
+    },
+    {
+      titulo: "Planificación y Programación de Auditorías",
+      temas: [
+        "Identificación de procesos críticos y riesgos",
+        "Planificación de la auditoría y definición de criterios",
+      ],
+    },
+    {
+      titulo: "Ejecución de la Auditoría",
+      temas: [
+        "Técnicas de revisión administrativa, financiera y operativa",
+        "Evaluación de cumplimiento normativo y control interno",
+      ],
+    },
+    {
+      titulo: "Evaluación de la Gestión de Recursos",
+      temas: [
+        "Auditoría de recursos humanos, financieros y materiales",
+        "Control de procesos y eficiencia operativa",
+      ],
+    },
+    {
+      titulo: "Transparencia, Informe y Rendición de Cuentas",
+      temas: [
+        "Elaboración de informes de auditoría",
+        "Comunicación de hallazgos y recomendaciones",
+      ],
+    },
+    {
+      titulo: "Aplicación Práctica y Casos Reales",
+      temas: [
+        "Ejercicios prácticos de auditoría en servicios de salud",
+        "Análisis de experiencias exitosas y lecciones aprendidas",
+      ],
+    },
+  ],
+};
 ---
-<InfoLayout title={`${pageTitle} | Información`}> 
+<InfoLayout title={`${pageTitle} | Información`}>
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+    <SubCursoInfo course={curso} />
   </section>
 </InfoLayout>
-
-

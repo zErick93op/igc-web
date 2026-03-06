@@ -1,18 +1,43 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Contabilidad Gubernamental y Reportes Financieros en el Sector Público";
 const backHref = "/cursos-gestion/gestion-presupuestaria-financiera";
+
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este Curso desarrolla los principios, normas y procedimientos contables aplicables a las entidades públicas, orientados a la adecuada generación, presentación y análisis de la información financiera y presupuestaria, conforme al marco normativo vigente.",
+  objetivo: "Fortalecer las capacidades de los participantes para aplicar correctamente la contabilidad gubernamental y elaborar reportes financieros confiables, oportunos y transparentes, que respalden la toma de decisiones en la gestión pública.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de los conocimientos en el contexto institucional.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y el desarrollo de las actividades académicas programadas, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en contabilidad gubernamental y elaboración de reportes financieros en el sector público",
+  },
+  modulos: [
+    { titulo: "Fundamentos de la Contabilidad Gubernamental", temas: ["Sistema Nacional de Contabilidad", "Principios y marco normativo aplicable al sector público"] },
+    { titulo: "Registro Contable de las Operaciones Públicas", temas: ["Clasificadores y cuentas contables", "Registro de ingresos, gastos y operaciones patrimoniales"] },
+    { titulo: "Articulación Presupuestaria y Contable", temas: ["Integración entre presupuesto y contabilidad", "Conciliaciones y control de la información financiera"] },
+    { titulo: "Elaboración de Estados Financieros y Presupuestarios", temas: ["Estados financieros gubernamentales", "Estados y reportes presupuestarios"] },
+    { titulo: "Reportes Financieros y Transparencia", temas: ["Reportes para la gestión y rendición de cuentas", "Normas de transparencia y acceso a la información"] },
+    { titulo: "Buenas Prácticas en Contabilidad Gubernamental", temas: ["Casos y experiencias en el sector público", "Aplicación práctica en la entidad"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+
+    <SubCursoInfo course = {curso}/>
 
   </section>
 </InfoLayout>

@@ -1,21 +1,77 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro";
 
 const pageTitle = "Gestión de Obras Públicas";
 const backHref = "/cursos-gestion/gestion-obras-publicas";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion:"Este curso proporciona conocimientos y herramientas para planificar, ejecutar, supervisar y evaluar proyectos de infraestructura pública, asegurando eficiencia, transparencia y control en el uso de los recursos del Estado. Se enfoca en el cumplimiento de normas, estándares técnicos y gestión de riesgos en cada etapa del ciclo de obra.",
+  objetivo:"Fortalecer las capacidades de los participantes para gestionar proyectos de obras públicas, garantizando la correcta planificación, ejecución, supervisión y rendición de cuentas de los recursos destinados a la infraestructura estatal.",
+  metodologia:"El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de técnicas y herramientas de gestión de obras públicas.",
+  evaluacion:"La evaluación considera la asistencia obligatoria, el cumplimiento de una nota mínima aprobatoria y la realización de ejercicios prácticos de planificación y supervisión de obras, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion:"La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion:
+      "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión de obras públicas, supervisión de infraestructura y control de recursos en el sector público.",
+  },
+  modulos: [
+    {
+      titulo: "Introducción a la Gestión de Obras Públicas",
+      temas: [
+        "Conceptos, objetivos y ciclo de vida de un proyecto de obra",
+        "Marco normativo y regulatorio",
+      ],
+    },
+    {
+      titulo: "Planificación y Programación de Obras",
+      temas: [
+        "Identificación de necesidades y viabilidad técnica",
+        "Programación presupuestaria y planificación de recursos",
+      ],
+    },
+    {
+      titulo: "Ejecución y Supervisión de Proyectos",
+      temas: [
+        "Procedimientos de ejecución de obras",
+        "Control de calidad, cronogramas y costos",
+      ],
+    },
+    {
+      titulo: "Gestión de Contratos y Proveedores",
+      temas: [
+        "Selección de contratistas y supervisión de cumplimiento contractual",
+        "Procedimientos de resolución de conflictos y reclamaciones",
+      ],
+    },
+    {
+      titulo: "Transparencia y Control en Obras Públicas",
+      temas: [
+        "Auditorías, control interno y rendición de cuentas",
+        "Buenas prácticas y prevención de riesgos",
+      ],
+    },
+    {
+      titulo: "Aplicación Práctica y Casos de Éxito",
+      temas: [
+        "Ejercicios prácticos de planificación y supervisión",
+        "Análisis de proyectos de infraestructura exitosos",
+      ],
+    },
+  ],
+};
 ---
-<InfoLayout title={`${pageTitle} | Información`}> 
+<InfoLayout title={`${pageTitle} | Información`}>
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
 
-  <section class="course-extra">
-
+    <SubCursoInfo course={curso} />
   </section>
 </InfoLayout>
-
-
-

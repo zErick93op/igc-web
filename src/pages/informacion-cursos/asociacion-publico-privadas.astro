@@ -1,20 +1,43 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Asociación Público Privadas (APP)";
 const backHref = "/cursos-gestion/inversion-publica";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso proporciona conocimientos y herramientas para la estructuración, implementación y gestión de proyectos bajo el esquema de colaboración entre el sector público y privado. Se enfoca en promover inversiones eficientes, sostenibles y transparentes que generen valor público y contribuyan al desarrollo económico.",
+  objetivo: "Fortalecer las capacidades de los participantes para diseñar, evaluar y gestionar proyectos APP, asegurando la adecuada distribución de riesgos, cumplimiento normativo y maximización de beneficios tanto para el Estado como para los socios privados.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de conceptos, técnicas y herramientas de APP en casos reales del sector público.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y la realización de actividades prácticas de análisis y aplicación de proyectos APP, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en asociaciones público-privadas, gestión de proyectos y financiamiento de infraestructura en el sector público.",
+  },
+  modulos: [
+    { titulo: "Introducción a las Asociaciones Público-Privadas (APP)", temas: ["Conceptos, objetivos y beneficios de las APP", "Marco normativo y regulatorio en el sector público"] },
+    { titulo: "Estructuración de Proyectos APP", temas: ["Identificación de oportunidades y análisis de viabilidad", "Modelos de distribución de riesgos y retorno"] },
+    { titulo: "Financiamiento y Contratos en APP", temas: ["Fuentes de financiamiento y estructura financiera", "Tipos de contratos y obligaciones de las partes"] },
+    { titulo: "Gestión y Supervisión de Proyectos APP", temas: ["Monitoreo, control y evaluación de resultados", "Gestión de conflictos y resolución de riesgos"] },
+    { titulo: "Transparencia y Buenas Prácticas", temas: ["Normas de transparencia y rendición de cuentas", "Experiencias exitosas y lecciones aprendidas"] },
+    { titulo: "Aplicación Práctica y Casos Reales", temas: ["Análisis de proyectos APP implementados", "Diseño y simulación de un proyecto APP"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+
+    <SubCursoInfo course={curso}/>
 
   </section>
 </InfoLayout>
-
 

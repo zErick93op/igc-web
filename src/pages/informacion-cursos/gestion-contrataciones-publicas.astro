@@ -1,18 +1,42 @@
 ---
 import InfoLayout from "../../layouts/InfoLayout.astro";
 import SubCursoForm from "../../components/SubCursoForm.astro";
+import SubCursoInfo from "../../components/SubCursoInfo.astro"
 
 const pageTitle = "Gestión de las Contrataciones Públicas";
 const backHref = "/cursos-gestion/sistema-nacional-de-abastecimiento";
+const curso = {
+  titulo: pageTitle,
+  intro: "",
+  presentacion: "Este curso proporciona conocimientos y herramientas para la correcta planificación, ejecución y supervisión de los procesos de contratación en el sector público, promoviendo eficiencia, transparencia y cumplimiento normativo en la adquisición de bienes, servicios y obras.",
+  objetivo: "Fortalecer las capacidades de los participantes para gestionar de manera eficiente y transparente los procesos de contratación pública, asegurando la correcta aplicación de la normativa vigente y la maximización del valor en las adquisiciones estatales.",
+  metodologia: "El curso se desarrolla bajo un enfoque de educación ejecutiva para adultos, aplicando principios de andragogía, con metodología práctica, participativa y orientada a la aplicación de los procedimientos de contratación en la gestión pública.",
+  evaluacion: "La evaluación considera el cumplimiento de una nota mínima aprobatoria, asistencia obligatoria y la realización de ejercicios prácticos de aplicación, conforme a los criterios establecidos por la entidad organizadora.",
+  certificacion: "La certificación será otorgada conforme a los estándares de SERVIR, de acuerdo con la normativa vigente sobre las Normas para la Gestión del Proceso de Capacitación en las Entidades Públicas.",
+  docente: {
+    nombre: "Docentes Especializados",
+    descripcion: "Los docentes que impartirán el curso son especialistas de amplia trayectoria y reconocida experiencia en gestión de contrataciones públicas, auditoría y control de procesos en el sector público.",
+  },
+  modulos: [
+    { titulo: "Fundamentos de las Contrataciones Públicas", temas: ["Conceptos, objetivos y principios de la contratación pública", "Marco normativo aplicable"] },
+    { titulo: "Planificación y Programación de Contrataciones", temas: ["Plan de contrataciones y estrategias de adquisición", "Identificación de necesidades y presupuesto"] },
+    { titulo: "Procesos de Selección y Adjudicación", temas: ["Modalidades de selección y procedimientos", "Evaluación de propuestas y adjudicación de contratos"] },
+    { titulo: "Ejecución y Supervisión de Contratos", temas: ["Gestión y control de la ejecución contractual", "Resolución de conflictos y cumplimiento de obligaciones"] },
+    { titulo: "Transparencia, Ética y Rendición de Cuentas", temas: ["Herramientas de transparencia y control en contrataciones", "Buenas prácticas y prevención de riesgos"] },
+    { titulo: "Aplicación Práctica y Casos de Éxito", temas: ["Simulaciones y análisis de casos reales", "Estrategias para optimizar procesos de contratación"] }
+  ]
+}
 ---
 <InfoLayout title={`${pageTitle} | Información`}> 
   <Fragment slot="head">
     <link rel="stylesheet" href="/styles/cursos/informacion-cursos.css" />
   </Fragment>
 
-  <SubCursoForm title={pageTitle} backHref={backHref} />
+  <section class="info-curso">
 
-  <section class="course-extra">
+    <SubCursoForm title={pageTitle} backHref={backHref} />
+
+    <SubCursoInfo course={curso}/>
 
   </section>
 </InfoLayout>
