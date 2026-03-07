@@ -681,7 +681,22 @@ header {
     justify-content: center;
     background-color: #001b7a;
     padding: 0;
+    position: relative;
 }
+
+.footer-credit {
+    position: absolute;
+    left: 15px;
+    bottom: 8px;
+    font-size: 0.7rem;
+}
+
+.by-credit {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
 .footer-down p{
     color: white;
     text-align: center;
