@@ -323,9 +323,9 @@ header {
     margin-bottom: 20px;
     padding-bottom: 10px ;
     font-size: 26px;
-    color: #444;
+    color: #001b7a;
     font-weight: 700;
-    border-bottom: 4px solid #444;
+    border-bottom: 4px solid #001b7a;
     text-align: center;
 }
 
@@ -462,10 +462,12 @@ header {
     font-size: 32px;
     margin-bottom: 5px;
     text-transform: uppercase;
+    color: #001b7a;
+    font-weight: 700;
 }
 
 .ubicacion-subtitulo {
-    color: #666;
+    color: #444;
     margin-bottom: 40px;
 }
 
@@ -490,6 +492,8 @@ header {
 .info-contacto h3 {
     margin-bottom: 25px;
     text-transform: uppercase;
+    color: #001b7a;
+    font-weight: 700;
 }
 
 .contacto-item {
