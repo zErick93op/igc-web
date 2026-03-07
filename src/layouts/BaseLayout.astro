@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import WhatsAppFlotante from "../components/WhatsAppFlotante.astro"
 
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap 
 
@@ -36,6 +37,18 @@ const { title = "IGC" } = Astro.props;
     </main>
 
     <Footer />
+
+    {WhatsAppFlotante && (
+      <WhatsAppFlotante
+        phone="51987654321" /* Debemos agregar Numero */
+        message="Hola, tengo una consulta 🙂" /*Podemos Personalizar el mensaje*/
+        position="br"     /* br | bl | tr | tl */
+        bottom={20}
+        sideOffset={20}
+        zIndex={12000}    /* súbelo si algo lo tapa */
+        showText={true}
+      />
+    )}
 
     <!--JS -->
     <script src="/js/script.js" is:inline></script>
