@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://igc.edu.pe/sitemap-index.xml
